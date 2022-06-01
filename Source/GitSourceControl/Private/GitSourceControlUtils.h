@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+// Copyright (c) 2014-2022 Sebastien Rombauts (sebastien.rombauts@gmail.com)
 //
 // Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 // or copy at http://opensource.org/licenses/MIT)
@@ -129,6 +129,7 @@ bool GetRemoteUrl(const FString& InPathToGitBinary, const FString& InRepositoryR
  * @returns true if the command succeeded and returned no errors
  */
 bool RunCommand(const FString& InCommand, const FString& InPathToGitBinary, const FString& InRepositoryRoot, const TArray<FString>& InParameters, const TArray<FString>& InFiles, TArray<FString>& OutResults, TArray<FString>& OutErrorMessages);
+bool RunCommandInternalRaw(const FString& InCommand, const FString& InPathToGitBinary, const FString& InRepositoryRoot, const TArray<FString>& InParameters, const TArray<FString>& InFiles, FString& OutResults, FString& OutErrors, const int32 ExpectedReturnCode = 0);
 
 /**
  * Run a Git "commit" command by batches.

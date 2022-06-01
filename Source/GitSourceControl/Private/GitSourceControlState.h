@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+// Copyright (c) 2014-2022 Sebastien Rombauts (sebastien.rombauts@gmail.com)
 //
 // Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 // or copy at http://opensource.org/licenses/MIT)
@@ -39,7 +39,7 @@ namespace ELockState
 	};
 }
 
-class FGitSourceControlState : public ISourceControlState, public TSharedFromThis<FGitSourceControlState, ESPMode::ThreadSafe>
+class FGitSourceControlState : public ISourceControlState
 {
 public:
 	FGitSourceControlState( const FString& InLocalFilename, const bool InUsingLfsLocking)

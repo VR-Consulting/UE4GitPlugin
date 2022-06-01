@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+// Copyright (c) 2014-2022 Sebastien Rombauts (sebastien.rombauts@gmail.com)
 //
 // Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 // or copy at http://opensource.org/licenses/MIT)
@@ -66,6 +66,10 @@ private:
 	void OnCheckedUseGitLfsLocking(ECheckBoxState NewCheckedState);
 	ECheckBoxState IsUsingGitLfsLocking() const;
 	bool GetIsUsingGitLfsLocking() const;
+	
+	void OnIsPushAfterCommitEnabled(ECheckBoxState NewCheckedState);
+	bool GetIsPushAfterCommitEnabled() const;
+	ECheckBoxState IsPushAfterCommitEnabled() const;
 
 	void OnLfsUserNameCommited(const FText& InText, ETextCommit::Type InCommitType);
 	FText GetLfsUserName() const;
